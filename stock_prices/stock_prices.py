@@ -8,9 +8,9 @@ def find_max_profit(prices):
     buy_price = 0
     sell_price = 0
     change_buy_price = True
-    is_sorted = all(prices[i] >= prices[i+1] for i in range(len(prices)-1))
+    is_sorted = all(prices[i] >= prices[i + 1] for i in range(len(prices) - 1))
     if is_sorted:
-      return  prices[1] - prices[0]
+        return prices[1] - prices[0]
     for i in range(len(prices) - 1):
         sell_price = prices[i + 1]
         if change_buy_price:
@@ -24,7 +24,6 @@ def find_max_profit(prices):
             if profit > max_profit:
                 max_profit = profit
                 change_buy_price = False
-            
 
     return max_profit
 
